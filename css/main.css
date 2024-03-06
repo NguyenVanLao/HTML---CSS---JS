@@ -1,0 +1,340 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Ruda:wght@400;600;700&display=swap");
+:root {
+    --line-border-fill: #de3163;
+    --line-border-empty: #383838;
+    --dark-color: #1c2833;
+    --light-gray-color: #ddd;
+    --white-color: #fff;
+    --blue: #2192be;
+    --white: #ffffff;
+    --yellow: #efb933;
+    --black: #4b4b4b;
+    --brown: #5c5c5c;
+    --gray: #e2e2e2;
+    --smooth: all .3s ease-in;
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: "poppins", sans-serif;
+    background: radial-gradient(
+        circle,
+        rgb(9, 66, 237) 0%,
+        rgb(6, 14, 165) 0%,
+        rgba(151, 156, 203, 1) 100%
+    );
+}
+
+.container{
+    width: 680px;
+    height: 670px;
+    margin: 2rem auto;
+    background-color: var(--white-color);
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(s0, 0, 0, 0.1);
+    border-radius: 5px;
+    position: relative;
+}
+.w3-container table{
+    position: absolute;
+    top: 47.5%;
+    z-index: 5;
+    padding: 0px 50px;
+    text-align: left;
+    vertical-align: top;
+    margin: 1.5px -200px;
+    line-height: 40px;
+}
+
+.w3-container table th:nth-child(2),
+.w3-container table td:nth-child(2),
+.w3-container table th:nth-child(3),
+.w3-container table td:nth-child(3),
+.w3-container table th:nth-child(4),
+.w3-container table td:nth-child(4) {
+    padding-left: 130px; 
+    color: var(--yellow);
+    font-weight: bold;
+
+}
+
+.total{
+    position: relative;
+    top: 170px;
+    right: 147px;
+    font-weight: bold;
+
+}
+
+
+
+button:hover{
+    background-color: var(gray);
+    transition: var(--smooth);
+}
+h3{
+    text-align: center;
+    margin-top: 1rem;
+    color: var(--dark-color);
+    font-size: 2rem;
+}
+h2{
+    text-align: center;
+    margin-top: 0.8rem;
+    color: var(--blue);
+    font-size: 1.3rem;
+}
+h1{
+    text-align: center;
+    margin-top: 0.2rem;
+    color: var(--dark-color);
+    font-size: 1.5rem;
+}
+
+
+.container form{
+    width: 300px;
+    position: absolute;
+    top: 100px;
+    left: 200px;
+    font-family: inherit;
+    transition: 0.5s ease-in;
+}
+
+.btn_box{
+    position: absolute;
+    width: 90%;
+    margin: 220px 0px;
+    text-align: center;
+}
+
+form button{
+    width: 110px;
+    height: 35px;
+    margin: 0 10px;
+    background-color: var(--brown);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-family: inherit;
+    border-radius: 5px;
+    color: var(--light-gray-color);
+}
+
+form button:active{
+    transform: scale(0.98);
+}
+
+#form2{
+    left: 900px;
+}
+#form3{
+    left: 900px;
+}
+#form4{
+    left: 900px;
+}
+#form5{
+    left: 900px;
+}
+#form6{
+    left: 900px;
+}
+#form7{
+    left: 900px;
+}
+
+.progress_container{
+    width: 550px;
+    display: flex;
+    justify-content: space-between;
+    margin: 2.5rem auto;
+    position: relative;
+    text-align: center;
+
+}
+
+.progress{
+    background-color: var(--yellow);
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translateY(-50%);
+    height: 4px;
+    width: 2%;
+    z-index: 1;
+    transition: 0.4s ease-in;
+}
+
+.circle{
+    background-color: var(--light-gray-color);
+    height: 50px;
+    width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10%;
+    z-index: 1;
+    transition: 0.4s ease;
+    font-size: 15px;
+
+
+}
+
+.circle.active{
+    border-color: var(--line-border-empty);
+    color: var(--light-gray-color);
+    background-color: var(--blue);
+
+}
+
+input.count.qty1 {
+    position: relative;
+    align-items: center;
+    color: var(--blue);
+    display: inline-block;
+    vertical-align: top;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 10px;
+    padding: -10px 10px;
+    min-width: 50px;
+    text-align: right;
+    left: 180px;
+    top: 133px;
+
+
+}
+input.count.qty2 {
+    position: relative;
+    /* display: flex; */
+    align-items: center;
+    color: var(--blue);
+    display: inline-block;
+    vertical-align: top;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 10px;
+    padding: -10px 10px;
+    min-width: 50px;
+    text-align: right;
+    left: 180px;
+    top: 144px;
+
+
+}
+input.count.qty3 {
+    position: relative;
+    /* display: flex; */
+    align-items: center;
+    color: var(--blue);
+    display: inline-block;
+    vertical-align: top;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 10px;
+    padding: -10px 10px;
+    min-width: 50px;
+    text-align: right;
+    left: 180px;
+    top: 153px;
+}
+
+.qty .plus {
+    background-color: var(--blue);
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: center;
+    color: white;
+    width: 30px;
+    height: 30px;
+    font: 30px/1 Arial,sans-serif;
+    text-align: center;
+    border-radius: 50%;
+    margin-right: 55px;
+    position: relative;
+    left: 250px;
+    top: 140px;
+
+    }
+.qty .minus {
+    background-color: #5c5c5c;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: top;
+    color: white;
+    width: 30px;
+    height: 30px;
+    font: 30px/1 Arial,sans-serif;
+    text-align: center;
+    border-radius: 50%;
+    background-clip: padding-box;
+    position: relative;
+    left: 200px;
+    top: 140px;
+
+
+}
+
+.minus:hover{
+    background-color: var(--yellow) !important;
+}
+.plus:hover{
+    background-color: var(--yellow) !important;
+}
+span{
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+input{  
+    border: 0;
+    width: 2%;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input:disabled{
+    background-color:white;
+}
+
+.qty .total {
+    margin-bottom: 10px;
+
+}
+button.payment-btn{
+    position: relative;
+    margin: 10px 90px;
+}
+
+.payment-btn {
+    /* padding: 10px 20px; */
+    background-color: var(--yellow);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+    position: absolute;
+    top: 210px;
+    right: 78px;
+    width: 245px;
+}
+
+.payment-btn:hover {
+    background-color: var(--blue);
+}
+

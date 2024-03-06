@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- Bao gồm thư viện jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>   
+    <!-- Connect file js, css -->
+    <link rel="stylesheet" href="css/main.css">
+    <script defer src="js/main.js"></script>
+    <title>App Final</title>
+</head>
+<body>
+    <div class="container">
+        <!-- Form 1 -->
+        <form id="form1">
+            <h3>Registration Form</h3>
+            <h2>Step 1</h2>
+            <h1>Noi dung step 1</h1>
+            <div class="btn_box">
+                <button id="next1" type="button">Next</button>
+            </div>
+        </form>
+        <!-- Form 2 -->
+        <form id="form2">
+            <h2>Step.02</h2>
+            <h1>追加オプションのご選択</h1>
+            <div class="step-content" id="step2_content">
+                 <!-- Add, subtract quantity -->
+                 <div class="qty mt-5">
+                    <input type="number" class="count qty1" name="qty" value="1" title="Quantity 1">
+                    <span class="plus bg-dark">+</span>
+                    <span class="minus bg-dark">-</span>
+                  </div>
+                
+                  <div class="qty mt-5">
+                    <input type="number" class="count qty2" name="qty" value="1" title="Quantity 2">
+                    <span class="plus bg-dark">+</span>
+                    <span class="minus bg-dark">-</span>
+                  </div>
+        
+                  <div class="qty mt-5">
+                    <input type="number" class="count qty3" name="qty" value="1" title="Quantity 3">
+                    <span class="plus bg-dark">+</span>
+                    <span class="minus bg-dark">-</span>
+                  </div>
+        
+                <div class="w3-container">                
+                    <table class="w3-table">
+                      <tr>
+                        <th>追加オプションの選択</th>
+                      </tr>
+                      <tr>
+                        <th>レンタル用品</th>
+                      </tr>
+                     
+                      <tr>
+                        <td>AC電源利用料</td>
+                        <td>1,100円 ×</td>
+                        
+                      </tr>
+                      <tr>
+                        <td>AC電源利用料</td>
+                        <td>1,100円 ×</td>
+                        
+                      </tr>
+                      <tr>
+                        <td>AC電源利用料</td>
+                        <td>1,100円 ×</td>
+                      </tr>
+                    </table>
+                  </div>
+            </div>
+
+            <!-- total price -->
+            <div class="total mt-3">
+                Total: <span id="totalAmount">3,300円</span>
+            </div>
+            <button class="payment-btn">この内容で予約する</button>
+            
+            <div class="btn_box">
+                <button id="back1" type="button">戻る</button>
+                <button id="next2" type="button">提出する</button>
+            </div>
+        </form>
+        <!-- Form 3 -->
+        <form id="form3">
+            <h3>Title</h3>
+            <h2>Step 3</h2>
+            <h1>Noi dung step 3</h1>
+            <div class="btn_box">
+                <button id="back2" type="button">Back</button>
+                <button id="next3" type="button">Next</button>
+            </div>
+        </form>
+         <!-- Form 4 -->
+         <form id="form4">
+            <h3>Title</h3>
+            <h2>Step 4</h2>
+            <h1>Noi dung step 4</h1>
+            <div class="btn_box">
+                <button id="back3" type="button">Back</button>
+                <button id="next4" type="button">Next</button>
+            </div>
+        </form>
+         <!-- Form 5 -->
+         <form id="form5">
+            <h3>Title</h3>
+            <h2>Step 5</h2>
+            <h1>Noi dung step 5</h1>
+            <div class="btn_box">
+                <button id="back4" type="button">Back</button>
+                <button id="next5" type="button">Next</button>
+            </div>
+        </form>
+         <!-- Form 6 -->
+         <form id="form6">
+            <h3>Title</h3>
+            <h2>Step 6</h2>
+            <h1>Noi dung step 3</h1>
+            <div class="btn_box">
+                <button id="back5" type="button">Back</button>
+                <button id="next6" type="button">Next</button>
+            </div>
+        </form>
+         <!-- Form 7 -->
+         <form id="form7">
+            <h3>Title</h3>
+            <h2>Step 7</h2>
+            <h1>Noi dung step 7</h1>
+            <div class="btn_box">
+                <button id="back6" type="button">Back</button>
+            </div>
+        </form>
+
+        <div class="progress_container">
+            <div class="progress" id="progress"></div>
+            <div class="circle active">予約内容 確認</div>
+            <div class="circle">予約内容 「確認</div>
+            <div class="circle">予約内容 確認</div>
+            <div class="circle">予約内容 確認</div>
+            <div class="circle">予約内容 確認</div>
+            <div class="circle">予約内容 確認</div>
+            <div class="circle">予約內容 確認</div>
+        </div>
+
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          // Lắng nghe sự kiện khi nhấn nút cho từng bước
+          for (let i = 1; i <= 7; i++) {
+            document.getElementById('step' + i + '_link').addEventListener('click', function(event) {
+              event.preventDefault(); // Ngăn chặn hành động mặc định của thẻ <a>
+              
+              // Ẩn tất cả các phần nội dung của các bước
+              hideAllStepsContent();
+              
+              // Hiển thị phần nội dung của bước tương ứng
+              document.getElementById('step' + i + '_content').style.display = 'block';
+            });
+          }
+        
+          // Hàm ẩn tất cả các phần nội dung của các bước
+          function hideAllStepsContent() {
+            const stepContents = document.querySelectorAll('.step-content');
+            stepContents.forEach(function(stepContent) {
+              stepContent.style.display = 'none';
+            });
+          }
+        });
+        </script>
+</body>
+</html>
