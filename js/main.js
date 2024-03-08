@@ -12,7 +12,7 @@ const progressEL = document.getElementById('progress');
 const circles = document.querySelectorAll('.circle');
 
 let currectActive = 1;
-// Next form
+// Next form 
 function nextOne(){
     form1.style.left = '-700px';
     form2.style.left = '220px';
@@ -206,7 +206,7 @@ const btnEvents = () => {
     back6.addEventListener("click", backSix);
 };
 document.addEventListener("DOMContentLoaded", btnEvents);
-
+// Process when to click buttons to calculate total price
 class QuantityControl {
     constructor(element) {
         this.element = element;
@@ -223,14 +223,13 @@ class QuantityControl {
         let value = parseInt(this.input.value);
         this.input.value = isNaN(value) ? 1 : value + 1;
         this.calculateTotal();
-    }
-  
+    } 
     decrement() {
         let value = parseInt(this.input.value);
         this.input.value = isNaN(value) ? 1 : Math.max(value - 1, 1);
         this.calculateTotal();
     }
-  
+// Calculate total price
     calculateTotal() {
       const pricePerItem1 = 1100; // Giá tiền cho sản phẩm 1
       const pricePerItem2 = 1100; // Giá tiền cho sản phẩm 2
@@ -247,14 +246,13 @@ class QuantityControl {
       const total = total1 + total2 + total3;
   
       totalAmount.textContent = `${total}円`;
-      // console.log('Tổng tiền:', total);
     }
   }
-  
+//  Function calculate each of qty
   document.querySelectorAll('.qty').forEach(element => new QuantityControl(element));
   
   
-  // Xử lý sự kiện khi nhấp vào nút thanh toán
+// Process payment when press payment button
   const paymentBtn = document.querySelector('.payment-btn');
   
   paymentBtn.addEventListener('click', function() {

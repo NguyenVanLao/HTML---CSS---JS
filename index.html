@@ -76,10 +76,11 @@
                   </div>
             </div>
 
-            <!-- total price -->
+            <!-- Total price -->
             <div class="total mt-3">
                 Total: <span id="totalAmount">3,300円</span>
             </div>
+            <!-- Payment -->
             <button class="payment-btn">この内容で予約する</button>
             
             <div class="btn_box">
@@ -136,7 +137,7 @@
                 <button id="back6" type="button">Back</button>
             </div>
         </form>
-
+        <!-- Bar contents -->
         <div class="progress_container">
             <div class="progress" id="progress"></div>
             <div class="circle active">予約内容 確認</div>
@@ -151,20 +152,17 @@
     </div>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-          // Lắng nghe sự kiện khi nhấn nút cho từng bước
+          // Conduct activities when listen to click mouse
           for (let i = 1; i <= 7; i++) {
             document.getElementById('step' + i + '_link').addEventListener('click', function(event) {
-              event.preventDefault(); // Ngăn chặn hành động mặc định của thẻ <a>
+              event.preventDefault(); // Prevent event
               
-              // Ẩn tất cả các phần nội dung của các bước
+              // Hide forms When page is moment
               hideAllStepsContent();
-              
-              // Hiển thị phần nội dung của bước tương ứng
-              document.getElementById('step' + i + '_content').style.display = 'block';
             });
           }
         
-          // Hàm ẩn tất cả các phần nội dung của các bước
+          // Hide forms
           function hideAllStepsContent() {
             const stepContents = document.querySelectorAll('.step-content');
             stepContents.forEach(function(stepContent) {
